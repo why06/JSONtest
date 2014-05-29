@@ -40,6 +40,14 @@ public class MainActivity extends ActionBarActivity {
         Log.d("JSON part", "made it thus far.");    
 		new DownloadJSON().execute("http://tntrailsandbyways.com/action/datapull.php?trail=1");
 		Log.d("JSON part", "made it past JSON.");
+		try {
+			Log.d("TESTING JSON", new JSONObject().put("id", 1).toString());
+			Log.d("TESTING JSON", new JSONObject().put("id", "1").toString());
+			Log.d("TESTING JSON", new JSONObject().put("datboolean", true).toString());
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
     }
